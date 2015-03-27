@@ -1,13 +1,9 @@
-var indexPage = {
-
-	onReady : function() {
-
-		var container = $('#main');
-
-		addView('dashboard', { message: 'Welcome to this site'}, container, null);
-
-
+setupPage(
+	{
+		"dashboard" : {
+			"message" : "Hello World!"
+		}
 	}
-}
+);
 
-$(document).ready( indexPage.onReady );
+

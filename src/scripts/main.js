@@ -48,14 +48,14 @@ function addViews(views, container, outerCallback) {
 
 
 
-function setupPage(pages) {
+function setupPage(views) {
 
 	var page = {
 
 		onReady : function() {
 			
-			$.each(pages, function(key, value) {
-				addView(key, value, null);
+			$.each(views, function(key, value) {
+				addView(key, value.data, value.callback);
 			});	
 
 		}
