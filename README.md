@@ -17,3 +17,23 @@ ref: index
 
 This will then setup the page and load in the mustache views.
 
+Pages are created with the following method:
+
+```
+var callback = function() {
+	// Stuff to run after views are added
+}
+
+
+setupPage(
+	[
+		{
+			"template" : "dashboard", // Mustache template used
+			"data": {
+				"message" : "Hello World!" // All your data goodness
+			}
+		}
+	], callback
+);
+```
+
