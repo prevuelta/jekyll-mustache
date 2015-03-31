@@ -1,10 +1,15 @@
-setupPage({
-	"dashboard" : {
-		"data" :{
-			"message" : "Hello World!"
-		},
-		"callback" : null
-	}
-});
+var callback = function() {
+
+}
 
 
+setupPage(
+	[
+		{
+			"template" : "dashboard",
+			"data": {
+				"message" : "Hello World!"
+			}
+		}
+	], callback
+);
