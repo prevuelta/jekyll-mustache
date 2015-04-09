@@ -1,5 +1,6 @@
+'use strict';
 
-viewContainer = $('#main');
+var viewContainer = $('#main');
 
 /* ------ Add mustache view ------ */
 
