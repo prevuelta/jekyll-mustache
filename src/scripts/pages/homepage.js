@@ -6,7 +6,7 @@ var callback = function() {
 setupPage(
 	[
 		{
-			"template" : "dashboard",
+			"template" : "message",
 			"data": {
 				"message" : "Hello World!"
 			}
