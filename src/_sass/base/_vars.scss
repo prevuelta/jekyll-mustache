@@ -1,0 +1,26 @@
+/*
+*	Base units
+*/
+
+// Base unit/s
+
+$bu: 12px;
+$qbu: $bu / 4;
+$qqqbu: $bu * 0.75;
+$tbu:	$bu / 3;
+$ttbu:	$bu * (3/2);
+$hbu: $bu / 2;
+$bu2: $bu * 2;
+$bu3: $bu * 3;
+$bu4: $bu * 4;
+$bu5: $bu * 5;
+$bu6: $bu * 6;
+
+$bu8: $bu * 8;
+
+$bu10: $bu * 10;
+
+
+$site-width: 996px; // Default: 960px
+$modal-width: 660px;
+$mobile-width: 320px;

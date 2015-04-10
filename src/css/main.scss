@@ -6,7 +6,27 @@
 
 @import "lib/normalize.css";
 
+// Base imports
 @import
-"base",
-"type",
-"header";
+"base/vars",
+"base/mixins",
+"base/colors",
+"base/helpers",
+"base/type",
+"base/grid";
+
+// Elements
+@import
+"elements/form",
+"elements/table";
+
+// Layout
+@import
+"layout/header",
+"layout/footer",
+"layout/layout";
+
+// Components
+@import
+"components/buttons",
+"components/nav-main";
