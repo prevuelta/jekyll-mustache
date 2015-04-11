@@ -2,7 +2,7 @@
 Site template using Jekyll & Mustache templates
 
 ## How it works
-There is a .js file for each page loaded based on ref: variable set in page header eg. 
+There is a .js file for each page loaded based on ref: variable set in the jekyll page YAML eg. 
 ```
 ---
 layout: default
@@ -17,7 +17,7 @@ ref: index
 
 This will then setup the page and load in the mustache views.
 
-Pages are created with the following method:
+Pages are created with the following:
 
 ```
 var callback = function() {
@@ -26,7 +26,7 @@ var callback = function() {
 
 
 setupPage(
-	[
+	[ // This is ana array of views.
 		{
 			"template" : "message", // Mustache template used
 			"data": {
