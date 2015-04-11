@@ -12,7 +12,7 @@ ref: index
 ---
 ```
 ```
-<script src="scripts/{{ page.ref }}.js"></script>
+<script src="scripts/pages/{{ page.ref }}.js"></script>
 ```
 
 This will then setup the page and load in the mustache views.
@@ -28,7 +28,7 @@ var callback = function() {
 setupPage(
 	[
 		{
-			"template" : "dashboard", // Mustache template used
+			"template" : "message", // Mustache template used
 			"data": {
 				"message" : "Hello World!" // All your data goodness
 			}
