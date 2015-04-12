@@ -1,12 +1,13 @@
 var callback = function() {
-
+	// Callback goodness here
 }
+
 
 
 setupPage(
 	[
 		{
-			"template" : "message",
+			"view" : "message",
 			"data": {
 				"message" : "Hello World!"
 			}

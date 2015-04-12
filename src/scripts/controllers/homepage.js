@@ -7,7 +7,7 @@ var callback = function() {
 setupPage(
 	[
 		{
-			"template" : "message",
+			"view" : "message",
 			"data": {
 				"message" : "Hello World!"
 			}
