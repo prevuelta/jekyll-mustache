@@ -2,7 +2,6 @@ var callback = function() {
 
 }
 
-
 setupPage(
 	[
 		{
