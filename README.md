@@ -12,7 +12,7 @@ ref: index
 ---
 ```
 ```
-<script src="scripts/pages/{{ page.ref }}.js"></script>
+<script src="scripts/controllers/{{ page.ref }}.js"></script>
 ```
 
 This will then setup the page and load in the mustache views.
@@ -26,10 +26,10 @@ var callback = function() {
 
 
 setupPage(
-	[ // This is ana array of views.
+	[ // This is an array of views.
 		{
-			"template" : "message", // Mustache template used
-			"data": {
+			"view" : "message", // Mustache template used
+			"model": {
 				"message" : "Hello World!" // All your data goodness
 			}
 		}

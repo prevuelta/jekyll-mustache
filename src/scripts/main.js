@@ -45,7 +45,7 @@ function addViews(views, outerCallback) {
 	var callback = outerCallback;
 
 	$.each(views, function(key, value) {
-		callback = createCallback(value.view, value.data, callback);
+		callback = createCallback(value.view, value.model, callback);
 	});
 
 	if(callback != null) {
