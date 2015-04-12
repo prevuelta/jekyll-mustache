@@ -9,7 +9,7 @@ function addView(template, model, callback, replace, prepend) {
 
 	console.log('Prepend: ' + prepend);
 
-	$.get('templates/' + template + '.html', function(template) {
+	$.get('views/' + template + '.html', function(template) {
 		var rendered =  Mustache.render(template, model);
 		if(!replace && !prepend) {
 
