@@ -8,7 +8,7 @@ There is a .js file for each page loaded based on ref: variable set in the jekyl
 layout: default
 title: Welcome to this site
 weight: 1
-ref: index
+controller: index
 ---
 ```
 ```
