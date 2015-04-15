@@ -36,6 +36,3 @@ setupPage(
 	], callback
 );
 ```
-
-Static content can still be added to the pages html file.
-

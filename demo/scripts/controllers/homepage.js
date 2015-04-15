@@ -8,7 +8,7 @@ setupPage(
 	[
 		{
 			"view" : "message",
-			"data": {
+			"model": {
 				"message" : "Hello World!"
 			}
 		}
