@@ -2,7 +2,8 @@
 Site template using Jekyll & Mustache templates
 
 ## How it works
-There is a javascript controller file loaded each page based on the controller ref variable set in the jekyll page YAML eg. 
+Static content is handled by the jekyll templating system while dynamic content is handled
+via mustache views. These are handled by a page controller loaded by a var in the jekyll YAML eg. 
 ```
 ---
 layout: default
@@ -36,5 +37,5 @@ setupPage(
 );
 ```
 
-Static conent can still be added to the page html files.
+Static content can still be added to the pages html file.
 
