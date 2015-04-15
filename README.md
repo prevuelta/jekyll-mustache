@@ -2,28 +2,27 @@
 Site template using Jekyll & Mustache templates
 
 ## How it works
-There is a .js file for each page loaded based on ref: variable set in the jekyll page YAML eg. 
+There is a javascript controller file loaded each page based on the controller ref variable set in the jekyll page YAML eg. 
 ```
 ---
 layout: default
 title: Welcome to this site
 weight: 1
-controller: index
+controller: homepage
 ---
 ```
 ```
 <script src="scripts/controllers/{{ page.ref }}.js"></script>
 ```
 
-This will then setup the page and load in the mustache views.
+This will then generate / load the model and perform any pre-render functions before loading the mustache views.
 
-Pages are created with the following:
+Example of basic page controller:
 
 ```
 var callback = function() {
 	// Stuff to run after views are added
 }
-
 
 setupPage(
 	[ // This is an array of views.
@@ -36,4 +35,6 @@ setupPage(
 	], callback
 );
 ```
+
+Static conent can still be added to the page html files.
 
