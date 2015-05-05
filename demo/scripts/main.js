@@ -1,70 +1,61 @@
+
 'use strict';
 
-var viewContainer = $('#main');
+var page = {
+	
+	viewContainer: $('#main'),
 
-/* ------ Add mustache view ------ */
+	setup: function(views, outerCallback) {
+		var page = this;
+		$(document).ready(
+			function() {
+				page.addViews(page.viewContainer, views, outerCallback);
+			}
+		);
+	},
 
-function addView(view, model, callback, replace, prepend) {
-	// Form view
+	addView: function(container, view, model, callback, replace, prepend) {
 
-	console.log('Prepend: ' + prepend);
+		$.get('views/' + view + '.html', function(view) {
+			var rendered =  Mustache.render(view, model);
+			if(!replace && !prepend) {
 
-	$.get('views/' + view + '.html', function(view) {
-		var rendered =  Mustache.render(view, model);
-		if(!replace && !prepend) {
+				container.append(rendered);
 
-			viewContainer.append(rendered);
+			} else if(prepend) {
 
-		} else if(prepend) {
+				console.log('prepending');
 
-			console.log('prepending');
+				container.prepend(rendered);
 
-			viewContainer.prepend(rendered);
+			} else {
+				container.html(rendered);
+			}
+			console.log("view added");
+			if(callback){
+				callback();
+			}
+		});
+	},
+	addViews : function(container, views, outerCallback) {
 
-		} else {
-			viewContainer.html(rendered);
+		var page = this;
+
+		function createCallback(view, model, callback) {
+			return function() {
+				page.addView(container, view, model, callback, false, false); 
+			}
 		}
-		console.log("view added");
-		if(callback){
+
+		var callback = outerCallback;
+
+		$.each(views, function(key, value) {
+			callback = createCallback(value.view, value.data, callback);
+		});
+
+		if(callback != null) {
 			callback();
 		}
-	});
-}
-
-
-/* ------ Add multiple mustache views as callbacks ------ */
-
-function addViews(views, outerCallback) {
-
-	function createCallback(view, model, callback) {
-		return function() {
-			addView(view, model, callback, false, false); 
-		}
 	}
-
-	var callback = outerCallback;
-
-	$.each(views, function(key, value) {
-		callback = createCallback(value.view, value.model, callback);
-	});
-
-	if(callback != null) {
-		callback();
-	}
-}
-
-
-function setupPage(views, outerCallback) {
-
-	var page = {
-
-		onReady : function() {
-			
-			addViews(views, outerCallback);
-
-		}
-	}
-
-	$(document).ready( page.onReady );
 
 }

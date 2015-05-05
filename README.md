@@ -13,7 +13,7 @@ controller: homepage
 ---
 ```
 ```
-<script src="scripts/controllers/{{ page.ref }}.js"></script>
+<script src="scripts/page_controllers/{{ page.ref }}.js"></script>
 ```
 
 This will then generate / load the model and perform any pre-render functions before loading the mustache views.

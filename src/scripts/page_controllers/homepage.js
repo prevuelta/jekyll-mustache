@@ -4,7 +4,7 @@ var callback = function() {
 
 
 
-setupPage(
+page.setup(
 	[
 		{
 			"view" : "message",
