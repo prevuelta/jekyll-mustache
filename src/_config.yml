@@ -11,3 +11,7 @@ github_username:  prevuelta
 # Build settings
 markdown: kramdown
 destination: ../demo
+include:
+  - .htaccess
+exclude:
+  - bower.json

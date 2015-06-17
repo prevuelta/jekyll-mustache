@@ -2,17 +2,9 @@
 	<p> This is the site footer </p>
 </footer>
 
-<!-- bower:js -->
-
-<script src="/bower_components/jquery/dist/jquery.min.js"></script>
-<script src="/bower_components/mustache/mustache.min.js"></script>
-<script src="/bower_components/mustache-wax/mustache-wax.min.js"></script>
-
-<!-- endbower -->
-
-<script src="scripts/util.js"></script>
-<script src="scripts/main.js"></script>
+{% javascript main %}
 
 {% if page.controller %}
-	<script src="scripts/page_controllers/{{ page.controller }}.js"></script>
-{% endif %}
+	{% capture controller %}pages/{{ page.controller}}{% endcapture %}
+	{{ controller | javascript }}
+ {% endif %}

@@ -28,8 +28,8 @@ var callback = function() {
 setupPage(
 	[ // This is an array of views.
 		{
-			"view" : "message", // Mustache template used
-			"model": {
+			"template" : "message", // Mustache template used
+			"data": {
 				"message" : "Hello World!" // All your data goodness
 			}
 		}
