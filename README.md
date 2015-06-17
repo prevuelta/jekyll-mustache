@@ -13,7 +13,11 @@ controller: homepage
 ---
 ```
 ```
-<script src="scripts/page_controllers/{{ page.ref }}.js"></script>
+{% if page.controller %}
+	{% capture controller %}pages/{{ page.controller}}{% endcapture %}
+	{{ controller | javascript }}
+ {% endif %}
+
 ```
 
 This will then generate / load the model and perform any pre-render functions before loading the mustache views.
